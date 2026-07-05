@@ -1,0 +1,27 @@
+# Virtual Environment
+venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+
+# Environment Variables
+.env
+
+# Database
+db.sqlite3
+
+# Uploaded Documents
+documents/
+
+# Chroma Database
+database/
+
+# Static Files
+staticfiles/
+
+# VS Code
+.vscode/
+
+# OS Files
+.DS_Store
