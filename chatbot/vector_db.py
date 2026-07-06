@@ -1,4 +1,5 @@
 import chromadb
+import uuid
 from .embedding import generate_embedding
 
 # Create Chroma client
@@ -15,12 +16,12 @@ def store_chunks(chunks):
     Store document chunks in ChromaDB.
     """
 
-    for index, chunk in enumerate(chunks):
+    for chunk in chunks:
 
         embedding = generate_embedding(chunk)
 
         collection.add(
-            ids=[str(index)],
+            ids=[str(uuid.uuid4())],
             documents=[chunk],
             embeddings=[embedding]
         )
